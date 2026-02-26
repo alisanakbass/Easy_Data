@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+  --color-secondary: #6366f1;
+  --color-background: #0b0f1a;
+  --color-surface: #111827;
+  --color-text: #f1f5f9;
+  --color-text-light: #94a3b8;
+  --color-accent: #f43f5e;
+  --color-danger: #e11d48;
+}
+
+/* ══════════════════════════════════════════════
+   TOKEN'LAR — Her zaman dark
+══════════════════════════════════════════════ */
+:root {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: dark;
+  color: #f1f5f9;
+  background-color: #0b0f1a;
+
+  /* Dark renk token'ları */
+  --bg-base: #0b0f1a;
+  --bg-surface: #111827;
+  --bg-surface-2: #1f2937;
+  --bg-surface-3: #273549;
+  --bg-surface-4: #162032;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-color: #1e293b;
+  --border-light: #1a2535;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ══════════════════════════════════════════════
+   BODY
+══════════════════════════════════════════════ */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at top right,
+    #111c33 0%,
+    #0b0f1a 50%,
+    #080c14 100%
+  );
+  color: var(--text-primary);
+}
+
+/* ══════════════════════════════════════════════
+   TAILWIND RENK OVERRIDE'LARI — Kalıcı dark
+══════════════════════════════════════════════ */
+
+/* Arka plan */
+.bg-white,
+.bg-\[\#f8fbff\] {
+  background-color: var(--bg-surface) !important;
+}
+.bg-gray-50,
+.bg-slate-50 {
+  background-color: var(--bg-surface-2) !important;
+}
+.bg-gray-100,
+.bg-slate-100 {
+  background-color: var(--bg-surface-3) !important;
+}
+.bg-gray-200,
+.bg-slate-200 {
+  background-color: var(--bg-surface-4) !important;
+}
+
+/* Metin */
+.text-gray-900,
+.text-gray-800 {
+  color: var(--text-primary) !important;
+}
+.text-gray-700,
+.text-slate-700,
+.text-slate-800 {
+  color: #cbd5e1 !important;
+}
+.text-gray-600,
+.text-slate-600 {
+  color: var(--text-secondary) !important;
+}
+.text-gray-500,
+.text-slate-500 {
+  color: var(--text-muted) !important;
+}
+.text-gray-400,
+.text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Border */
+.border-gray-100,
+.border-gray-200,
+.border-slate-100,
+.border-slate-200 {
+  border-color: var(--border-color) !important;
+}
+
+/* Input / Select / Textarea */
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]):not(
+    [type="range"]
+  ),
+select,
+textarea {
+  background-color: var(--bg-surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Hover */
+.hover\:bg-gray-50:hover,
+.hover\:bg-slate-50:hover {
+  background-color: var(--bg-surface-3) !important;
+}
+.hover\:bg-gray-100:hover {
+  background-color: var(--bg-surface-4) !important;
+}
+
+/* Shadow */
+.shadow-sm {
+  box-shadow: 0 1px 3px var(--shadow-color) !important;
+}
+.shadow-xl {
+  box-shadow: 0 20px 40px var(--shadow-color) !important;
+}
+
+/* ══════════════════════════════════════════════
+   ÖZEL BİLEŞEN STİLLERİ
+══════════════════════════════════════════════ */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scanner-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  z-index: 11;
+}
+
+@keyframes scanline {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: var(--color-danger);
+  box-shadow: 0 0 10px var(--color-danger);
+  border-radius: 4px;
+  animation: scanline 3s linear infinite;
+  z-index: 12;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes pulseFast {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-fast {
+  animation: pulseFast 1.5s infinite;
+}
+
+@keyframes scan {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.animate-scan-line {
+  animation: scan 2s linear infinite;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
