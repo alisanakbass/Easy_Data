@@ -45,15 +45,7 @@ graph TD
     style DB fill:#336791,stroke:#fff,color:#fff
 ```
 
-## 📸 Ekran Görüntüleri
 
-### Müşteri Barkod Okutma Ekranı
-
-![Ana Sayfa](screenshots/landing.png)
-
-### Personel/Admin Giriş Ekranı
-
-![Giriş Sayfası](screenshots/login.png)
 
 ## 🎯 Çözüm Sunduğumuz Sorunlar
 
