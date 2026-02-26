@@ -55,14 +55,23 @@ graph TD
 
 ![Giriş Sayfası](screenshots/login.png)
 
+## 🎯 Çözüm Sunduğumuz Sorunlar
+
+Easy_Data, perakende ve depo yönetiminde karşılaşılan maliyetli ve karmaşık süreçleri modernize eder:
+
+- **Maliyet Tasarrufu:** Pahalı el terminallerine ve barkod okuyucu donanımlara gerek duymaz. Herkes kendi akıllı telefonunu bir terminale dönüştürebilir.
+- **Dijital Dönüşüm:** Manuel ve kağıt üzerindeki süreçleri tamamen dijital ortama taşır, operasyonel hızı artırır.
+- **Veri Kalitesi:** Personel, hatalı veya eksik ürünlerin fotoğrafını çekerek sisteme bildirir. Admin onayıyla sadece doğru kayıtlar sisteme girer, veri kirliliği engellenir.
+- **ERP Uyumluluğu:** Mikro ve diğer popüler ERP sistemleriyle uyumlu çalışacak şekilde tasarlanmıştır.
+- **Akıllı Stok:** Kritik stok alarmları ile ürün bitmeden önlem almanızı sağlar.
+- **Hızlı Operasyon:** Binlerce üründe aynı anda toplu fiyat güncellemesi (zam/indirim) veya kampanya tanımlama yapılabilir.
+
 ## ✨ Öne Çıkan Özellikler
 
 - **Backend Migration (Node.js ➔ Go):** Backend mimarisi tamamen Go diline taşınarak sistem performansı ve eşzamanlı çalışma (concurrency) kapasitesi maksimize edildi.
 - **Gelişmiş Envanter Yönetimi:** Ürünlerin kategorize edilmesi, stok takibi ve detaylı ürün sorgulamaları.
 - **Excel Entegrasyonu:** `excelize` kütüphanesi ile yüksek hacimli veri setlerinin hızlı bir şekilde işlenmesi.
-- **Personel Paneli:** Personel yetkilendirme ve işlem takibi.
 - **Modern UI:** React 19 ve TailwindCSS 4 kullanılarak geliştirilmiş, kullanıcı dostu ve hızlı arayüz.
-- **QR Kod Desteği:** Ürün takibi için QR kod entegrasyonu.
 
 ## 🛠️ Teknoloji Yığını
 
@@ -81,37 +90,6 @@ graph TD
 - **Styling:** TailwindCSS v4
 - **İkonlar:** Lucide React & React Icons
 - **Routing:** React Router 7
-
-## 🚀 Kurulum
-
-### Gereksinimler
-
-- Go 1.25.6 veya üzeri
-- Node.js (v18+) & npm
-
-### Backend Kurulumu
-
-1. Kök dizine gidin:
-   ```bash
-   go mod download
-   ```
-2. `.env` dosyasını yapılandırın.
-3. Sunucuyu başlatın:
-   ```bash
-   go run cmd/server/main.go
-   ```
-
-### Frontend Kurulumu
-
-1. `frontend` dizinine gidin:
-   ```bash
-   cd frontend
-   npm install
-   ```
-2. Geliştirme sunucusunu başlatın:
-   ```bash
-   npm run dev
-   ```
 
 ## 📈 Neden Go'ya Geçtik?
 
