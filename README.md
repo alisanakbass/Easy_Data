@@ -47,9 +47,12 @@ graph TD
 
 ## 📸 Ekran Görüntüleri
 
-|          Müşteri Barkod Okutma Ekranı           |          Personel/Admin Giriş Ekranı          |
-| :---------------------------------------------: | :-------------------------------------------: |
-| <img src="screenshots/landing.png" width="400"> | <img src="screenshots/login.png" width="400"> |
+|                           Müşteri & Giriş Ekranları                           |                             Personel & Dashboard                              |
+| :---------------------------------------------------------------------------: | :---------------------------------------------------------------------------: |
+| <img src="screenshots/Screenshot_1.png" width="400"> <br> _Müşteri Sorgulama_ | <img src="screenshots/Screenshot_2.png" width="400"> <br> _Giriş & QR Erişim_ |
+|  <img src="screenshots/Screenshot_3.png" width="400"> <br> _Personel Menüsü_  |  <img src="screenshots/Screenshot_4.png" width="400"> <br> _Admin Dashboard_  |
+|   <img src="screenshots/Screenshot_5.png" width="400"> <br> _Ürün Yönetimi_   |   <img src="screenshots/Screenshot_6.png" width="400"> <br> _Talep Takibi_    |
+| <img src="screenshots/Screenshot_7.png" width="400"> <br> _Kampanya Yönetimi_ |   <img src="screenshots/Screenshot_8.png" width="400"> <br> _Tanımlamalar_    |
 
 ## 🎯 Çözüm Sunduğumuz Sorunlar
 
