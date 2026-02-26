@@ -47,13 +47,9 @@ graph TD
 
 ## 📸 Ekran Görüntüleri
 
-### Müşteri Barkod Okutma Ekranı
-
-![Ana Sayfa](screenshots/landing.png)
-
-### Personel/Admin Giriş Ekranı
-
-![Giriş Sayfası](screenshots/login.png)
+|          Müşteri Barkod Okutma Ekranı           |          Personel/Admin Giriş Ekranı          |
+| :---------------------------------------------: | :-------------------------------------------: |
+| <img src="screenshots/landing.png" width="400"> | <img src="screenshots/login.png" width="400"> |
 
 ## 🎯 Çözüm Sunduğumuz Sorunlar
 
